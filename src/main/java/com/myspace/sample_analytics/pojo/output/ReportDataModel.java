@@ -26,8 +26,11 @@ public class ReportDataModel implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Total disk space used found ")
 	private java.lang.Long totalDiskSpace;
 
-	@org.kie.api.definition.type.Label(value = "Total price for subscriptions once migrated")
+	@org.kie.api.definition.type.Label("Total price for subscriptions once migrated")
 	private java.lang.Integer totalPrice;
+
+	@org.kie.api.definition.type.Label(value = "Date of creation")
+	private java.util.Date creationDate;
 
 	public ReportDataModel() {
 	}
@@ -80,15 +83,25 @@ public class ReportDataModel implements java.io.Serializable {
 		this.totalPrice = totalPrice;
 	}
 
+	public java.util.Date getCreationDate() {
+		return this.creationDate;
+	}
+
+	public void setCreationDate(java.util.Date creationDate) {
+		this.creationDate = creationDate;
+	}
+
 	public ReportDataModel(java.lang.Long id, java.lang.String customerId,
 			java.lang.String fileName, java.lang.Integer numberOfHosts,
-			java.lang.Long totalDiskSpace, java.lang.Integer totalPrice) {
+			java.lang.Long totalDiskSpace, java.lang.Integer totalPrice,
+			java.util.Date creationDate) {
 		this.id = id;
 		this.customerId = customerId;
 		this.fileName = fileName;
 		this.numberOfHosts = numberOfHosts;
 		this.totalDiskSpace = totalDiskSpace;
 		this.totalPrice = totalPrice;
+		this.creationDate = creationDate;
 	}
 
 }
